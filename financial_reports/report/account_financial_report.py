@@ -17,7 +17,7 @@ class account_financial_report(models.Model):
     _name = "account.financial.report"
     _description = "Account Report"
 
-    @api.multi
+
     @api.depends('parent_id', 'parent_id.level')
     def _get_level(self):
         '''Returns a dictionary with key=the ID of a record and value = the level of this  
